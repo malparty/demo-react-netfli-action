@@ -5,18 +5,16 @@ on:
     types: ['opened', 'edited', 'synchronize']
 
 jobs:
-  build:
-    steps:
-      - name: 'Yarn Build'
-        run: yarn build
-
   deploy:
     name: 'Deploy'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
 
+      - name: 'Yarn Build'
+        run: yarn build
+
       - uses: jsmrcaga/action-netlify-deploy@master
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }} 
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
