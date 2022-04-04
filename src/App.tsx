@@ -21,7 +21,7 @@ function App(): JSX.Element {
           rel="noopener noreferrer"
           data-test-id="app-link"
         >
-          {t('sample_page.learn_react')} Hiiiiiyaaaaaaaaaaa!
+          {t('sample_page.learn_react')} Hiiiiiyaaaaaaaaaaa! Last test here!
         </a>
         <BaseButton label="Hell world" />
       </header>
