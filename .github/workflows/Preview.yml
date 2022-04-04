@@ -6,7 +6,6 @@ on:
 
 jobs:
   build:
-    name: 'Build'
     steps:
       - name: 'Yarn Build'
         run: yarn build
