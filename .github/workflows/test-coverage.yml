@@ -15,5 +15,5 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           package-manager: yarn
-          test-script: yarn test .
+          test-script: yarn test
           threshold: 80 # prevent PR merge under 80% coverage
