@@ -7,16 +7,16 @@ interface ButtonProps {
 function BaseButton({ label = '' }: ButtonProps): JSX.Element {
   const [isItGreat, setAnotherLabel] = useState(false)
 
-  async function doSomething() {
-    console.log(label)
-    setAnotherLabel(false)
-  }
-
   useEffect(() => {
+    async function doSomething() {
+      console.log(label)
+      setAnotherLabel(false)
+    }
+
     doSomething()
     console.log(isItGreat)
     setAnotherLabel(true)
-  }, [isItGreat])
+  }, [isItGreat, label])
 
   if (isItGreat) {
     return <span className="btn">{label} YEAAAHHH!</span>

@@ -1,7 +1,7 @@
 import axios, { Method as HTTPMethod, ResponseType, AxiosRequestConfig, AxiosResponse } from 'axios'
 
 export const defaultOptions: { responseType: ResponseType } = {
-  responseType: 'json'
+  responseType: 'json',
 }
 
 /**
@@ -19,7 +19,7 @@ const requestManager = (method: HTTPMethod, endpoint: string, requestOptions: Ax
     method,
     url: endpoint,
     ...defaultOptions,
-    ...requestOptions
+    ...requestOptions,
   }
 
   return axios.request(requestParams).then((response: AxiosResponse<any>) => {

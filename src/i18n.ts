@@ -27,8 +27,8 @@ const configureI18n = (): void => {
       supportedLngs: supportedLanguages,
 
       interpolation: {
-        escapeValue: false // not needed for react as it escapes by default
-      }
+        escapeValue: false, // not needed for react as it escapes by default
+      },
     })
 }
 

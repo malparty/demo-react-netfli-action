@@ -7,7 +7,7 @@ module.exports = (on, config) => {
   on(
     'file:preprocessor',
     browserify({
-      typescript: require.resolve('typescript')
+      typescript: require.resolve('typescript'),
     })
   )
 
