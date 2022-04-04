@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import logo from './assets/images/logo.svg'
 import './dummy.scss'
 import './assets/stylesheets/application.scss'
+import BaseButton from './components/BaseButton'
 
 function App(): JSX.Element {
   const { t } = useTranslation()
@@ -22,6 +23,7 @@ function App(): JSX.Element {
         >
           {t('sample_page.learn_react')}
         </a>
+        <BaseButton label="Hell world" />
       </header>
     </div>
   )
