@@ -16,7 +16,7 @@ function BaseButton({ label = '' }: ButtonProps): JSX.Element {
     doSomething()
     console.log(isItGreat)
     setAnotherLabel(true)
-  }, [isItGreat])
+  }, [isItGreat, doSomething])
 
   if (isItGreat) {
     return <span className="btn">{label} YEAAAHHH!</span>
